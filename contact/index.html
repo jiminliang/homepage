@@ -20,13 +20,22 @@
 <meta name="citation_author" content="Jimin Liang">
 
 
-<meta name="citation_author" content="Minghao Dong">
+<meta name="citation_author" content="Shouping Zhu">
+
+
+<meta name="citation_author" content="Xueli Chen">
+
+
+<meta name="citation_author" content="Yonghua Zhan">
+
+
+<meta name="citation_author" content="Duofang Chen">
 
 
 <meta name="citation_author" content="Xu Cao">
 
 
-<meta name="citation_author" content="Duofang Chen">
+<meta name="citation_author" content="Minghao Dong">
 
 
 <meta name="citation_author" content="Qi Zeng">
@@ -35,7 +44,16 @@
 <meta name="citation_author" content="Yun Zeng">
 
 
+<meta name="citation_author" content="Xinyi Xu">
+
+
 <meta name="citation_author" content="Hui Xie">
+
+
+<meta name="citation_author" content="Shenghan Ren">
+
+
+<meta name="citation_author" content="Fanzhen Meng">
 
 
 
@@ -170,11 +188,11 @@
                 <!-- </li> -->
                 <!--  -->
                 <!-- <li> -->
-                    <!-- <a href="/homepage/search/">Search</a> -->
+                    <!-- <a href="/homepage/publications/">Publications</a> -->
                 <!-- </li> -->
                 <!--  -->
                 <!-- <li> -->
-                    <!-- <a href="/homepage/publications/">Publications</a> -->
+                    <!-- <a href="/homepage/search/">Search</a> -->
                 <!-- </li> -->
                 <!--  -->
                 <!-- <li> -->
@@ -217,13 +235,162 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			With <b><a href="https://www.altmetric.com/">Altmetric</a></b>, track the impact of your Project Page on the community through mentions tracked in a rich variety of sources. Currently requires registration with Project-Pages admins to set up.
+			<p><strong><em>Post Address :</em></strong></p>
+<blockquote>
+  <p>P.O. Box 0528 <br />
+266 Xinglong Section of Xifeng Road <br />
+School of Life Science and Technology <br />
+Xidian University <br />
+Xi’an, Shaanxi 710126 <br />
+China <br /></p>
+</blockquote>
 
-<br>
+<p><em>Whatever it is called the new campus, the south campus, or the Chang’an campus, it is the same.</em></p>
 
-<p>Below is a sample image and not reflective of the statistics of this project.</p>
+<hr />
 
-<a href="https://www.altmetric.com/"><img src= "/homepage/img/altmetricsamplebadge.PNG " style="width: 60%; margin-left: 20%; margin-right: 20%;"></a>
+<p><strong><em>Offices :</em></strong></p>
+<blockquote>
+  <p>G-401: Xueli Chen, Duofang Chen, Xinyi Xu, Yun Zeng, Shenghan Ren <br />
+G-403: Qi Zeng <br />
+G-404: Shouping Zhu, Yonghua Zhan, Xu Cao <br />
+G-410: Jimin Liang <br /></p>
+</blockquote>
+
+<hr />
+
+<p><strong><em>Visit Us :</em></strong> <br /></p>
+
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&amp;v=1.1&amp;services=true"></script>
+
+<body>
+  <!--百度地图容器-->
+  <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+        addPolyline();//向地图中添加线
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(108.846346,34.129552);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"School of Life Science and Technology",content:"Xidian&nbsp;University",point:"108.845389|34.129402",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+//标注线数组
+    var plPoints = [{style:"solid",weight:4,color:"#f00",opacity:0.6,points:["108.844113|34.130067","108.84423|34.130291","108.846422|34.129388","108.846251|34.129141","108.845542|34.129417","108.845317|34.129059","108.84511|34.129163","108.845299|34.129537","108.844095|34.130067"]}
+		 ];
+    //向地图中添加线函数
+    function addPolyline(){
+		for(var i=0;i<plPoints.length;i++){
+			var json = plPoints[i];
+			var points = [];
+			for(var j=0;j<json.points.length;j++){
+				var p1 = json.points[j].split("|")[0];
+				var p2 = json.points[j].split("|")[1];
+				points.push(new BMap.Point(p1,p2));
+			}
+			var line = new BMap.Polyline(points,{strokeStyle:json.style,strokeWeight:json.weight,strokeColor:json.color,strokeOpacity:json.opacity});
+			map.addOverlay(line);
+		}
+	}
+    
+    initMap();//创建和初始化地图
+</script>
+
+
 		</div>
 	</div>
 </div>
