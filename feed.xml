@@ -5,9 +5,81 @@
     <description>School of Life Science and Technology, Xidian University</description>
     <link>https://jiminliang.github.io/homepage/</link>
     <atom:link href="https://jiminliang.github.io/homepage/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 04 Sep 2018 12:59:37 +0800</pubDate>
-    <lastBuildDate>Tue, 04 Sep 2018 12:59:37 +0800</lastBuildDate>
-    <generator>Jekyll v3.8.3</generator>
+    <pubDate>Thu, 20 Sep 2018 19:16:57 +0800</pubDate>
+    <lastBuildDate>Thu, 20 Sep 2018 19:16:57 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.4</generator>
+    
+      <item>
+        <title>Maintaining the website</title>
+        <description>
+
+My first blog!
+
+I built this website using Jekyll on Windows 10. It cost me one week to build the framework and another week to fill the contents. I wrote the following tips in case I need to repeat the job sometimes in the future.
+
+
+
+  Fundamentals
+  Installation
+  Build
+
+
+
+
+Fundamentals
+Github provides a simple way to build and host a static website or blogs. It surports Jelyll, a simple, extendable, static site generator, and markdown language to wirte the website pages.
+
+
+  
+    Basic knowledge about Github Pages. I used homepage in stead of username.github.io as the repository name of my website. In this case my website can be accessed at https://jiminliang.github.io/homepage/.
+  
+  
+    Knowledge about Jekyll.
+  
+  Our website is based on the Project Pages template. I moved the blog page to an individual webpage, by adding the following line in _config.yml:
+    paginate_path: &quot;/blog/page:10/&quot;
+    
+  
+  For publication list, I used the bibjekyll plugin. On Windows, beside bibtex2html, you also need to install the bibtex.exe. I installed the CTEX packges to have it.
+
+
+A more detailed description on how to maintain a website with Jekyll can be found here.
+
+Installation
+
+  
+    Install Jekyll following comments here.
+  
+  Install jekyll-paginate plugin :
+    gem install jekyll-paginate
+    
+  
+  Install bibjekyll plugin following comments here and add the path of Bibtex2html to system path variable.
+
+
+Build
+
+  Preview locally ：
+    jekyll serve
+    
+  
+  Build to other directory ：
+    jekyll build --destination ..\homepage
+    
+  
+  Done. Publish it with Git.
+
+</description>
+        <pubDate>Tue, 04 Sep 2018 00:00:00 +0800</pubDate>
+        <link>https://jiminliang.github.io/homepage/skills/2018/09/04/Maintaining-website/</link>
+        <guid isPermaLink="true">https://jiminliang.github.io/homepage/skills/2018/09/04/Maintaining-website/</guid>
+        
+        <category>How_to</category>
+        
+        
+        <category>Skills</category>
+        
+      </item>
     
       <item>
         <title>New Surface Visualization</title>
